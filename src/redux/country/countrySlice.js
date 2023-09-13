@@ -11,7 +11,7 @@ const initialState = {
 
 export const fetchCountries = createAsyncThunk('countries/fetchCountries', async () => {
   try {
-    const response = await axios.get('https://restcountries.com/v2/region/africa');
+    const response = await axios.get('https://restcountries.com/v2/all');
     return response.data;
   } catch (error) {
     throw error;
