@@ -25,7 +25,7 @@ const CountryList = () => {
       <h1>Country List</h1>
       <ul>
         {countries.map((country) => (
-          <li key={country.alpha2Code}>{country.name}</li>
+          <li key={country.alpha2Code}>Name: {country.name} Population: {country.population} Region: {country.region} </li>
         ))}
       </ul>
     </div>
