@@ -5,7 +5,7 @@ import React from 'react';
 
 const Nav = () => (
   <>
-    <nav className="flex flex-row bg-blue-800 text-white text-3xl justify-between">
+    <nav className="flex flex-row bg-[#4369b2] text-white text-3xl justify-between">
       <div className="flex flex-row p-4 flex-1 items-center">
         <FaChevronLeft />
         <p>2015</p>
