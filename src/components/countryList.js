@@ -17,7 +17,12 @@ const CountryList = () => {
   }
 
   if (status === 'failed') {
-    return <div>Error: {error}</div>;
+    return (
+      <div>
+        Error:
+        {error}
+      </div>
+    );
   }
 
   return (
@@ -25,7 +30,16 @@ const CountryList = () => {
       <h1>Country List</h1>
       <ul>
         {countries.map((country) => (
-          <li key={country.alpha2Code}>Name: {country.name} Population: {country.population} Region: {country.region} </li>
+          <li key={country.alpha2Code}>
+            Name:
+            {country.name}
+            {' '}
+            Population:
+            {country.population}
+            {' '}
+            Region:
+            {country.region}
+          </li>
         ))}
       </ul>
     </div>
