@@ -1,9 +1,11 @@
-// Routes.js
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Import 'Routes' instead of 'Switch'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
 import SouthernAfrica from './components/SouthernAfrica';
 import NorthernAfrica from './components/NorthernAfrica';
+import WesternAfrica from './components/WesternAfrica'; // Import WesternAfrica component
+import EasternAfrica from './components/EasternAfrica'; // Import EasternAfrica component
+import CentralAfrica from './components/CentralAfrica'; // Import CentralAfrica component
 import CountryList from './components/countryList';
 
 const RoutesComponent = () => (
@@ -13,8 +15,11 @@ const RoutesComponent = () => (
       <Route path="/country-list" element={<CountryList />} />
       <Route path="/southern-africa" element={<SouthernAfrica />} />
       <Route path="/northern-africa" element={<NorthernAfrica />} />
+      <Route path="/western-africa" element={<WesternAfrica />} />
+      <Route path="/eastern-africa" element={<EasternAfrica />} />
+      <Route path="/central-africa" element={<CentralAfrica />} />
     </Routes>
   </Router>
 );
 
-export default RoutesComponent; // Rename the exported component
+export default RoutesComponent;
