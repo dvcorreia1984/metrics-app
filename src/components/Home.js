@@ -1,17 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { GiAfrica } from 'react-icons/gi';
 import SouthernAfricaImage from '../assets/country.svg';
 import WesternAfricaImage from '../assets/country2.svg';
 import NorthernAfricaImage from '../assets/country3.svg';
 import EasternAfricaImage from '../assets/country4.svg';
 import CentralAfricaImage from '../assets/country5.svg';
+import AfricaImage from '../assets/africa.svg';
 
 const Home = () => (
   <div>
     <div className="flex bg-blue-400 justify-evenly">
       <div className="text-9xl text-blue-950">
-        <GiAfrica />
+        <img src={AfricaImage} alt="africa" />
       </div>
       <div className="flex flex-col justify-center items-start text-white">
         <h1 className="font-bold text-4xl">AFRICA</h1>
