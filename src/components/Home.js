@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { GiAfrica } from 'react-icons/gi';
-import SouthernAfricaImage from '../assets/southern-africa.png';
-import WesternAfricaImage from '../assets/western-africa.png';
-import NorthernAfricaImage from '../assets/northern-africa.png';
-import EasternAfricaImage from '../assets/eastern-africa.png';
-import CentralAfricaImage from '../assets/central-africa.png';
+import SouthernAfricaImage from '../assets/country.svg';
+import WesternAfricaImage from '../assets/country2.svg';
+import NorthernAfricaImage from '../assets/country3.svg';
+import EasternAfricaImage from '../assets/country4.svg';
+import CentralAfricaImage from '../assets/country5.svg';
 
 const Home = () => (
   <div>
@@ -19,35 +19,39 @@ const Home = () => (
       </div>
     </div>
     <div className="bg-blue-800 pl-5 text-white font-bold">STATS BY COUNTRY</div>
-    <div className="flex flex-wrap text-center bg-red-400">
-      <Link to="/southern-africa" className="w-full md:w-1/2 lg:w-1/5 p-2">
-        <button type="button">
-          <img src={SouthernAfricaImage} alt="Southern Africa" className="w-16 h-16 mx-auto" />
-          Southern Africa
+    <div className="flex flex-wrap text-center bg-blue-800">
+      <Link to="/southern-africa" className="w-full sm:w-1/2">
+        <button type="button" className="w-full aspect-square text-white font-bold">
+          <img
+            src={SouthernAfricaImage}
+            alt="Southern Africa"
+            className="w-full h-full mx-auto"
+          />
+          SOUTHERN AFRICA
         </button>
       </Link>
-      <Link to="/western-africa" className="w-full md:w-1/2 lg:w-1/5 p-2">
-        <button type="button">
-          <img src={WesternAfricaImage} alt="Western Africa" className="w-16 h-16 mx-auto" />
-          Western Africa
+      <Link to="/western-africa" className="w-full sm:w-1/2 bg-blue-700">
+        <button type="button" className="w-full aspect-square text-white font-bold">
+          <img src={WesternAfricaImage} alt="Western Africa" className="w-full h-full mx-auto" />
+          WESTERN AFRICA
         </button>
       </Link>
-      <Link to="/northern-africa" className="w-full md:w-1/2 lg:w-1/5 p-2">
-        <button type="button">
-          <img src={NorthernAfricaImage} alt="Northern Africa" className="w-16 h-16 mx-auto" />
-          Northern Africa
+      <Link to="/northern-africa" className="w-full sm:w-1/2 bg-blue-700">
+        <button type="button" className="w-full aspect-square text-white font-bold">
+          <img src={NorthernAfricaImage} alt="Northern Africa" className="w-full h-full mx-auto" />
+          NORTHERN AFRICA
         </button>
       </Link>
-      <Link to="/eastern-africa" className="w-full md:w-1/2 lg:w-1/5 p-2">
-        <button type="button">
-          <img src={EasternAfricaImage} alt="Eastern Africa" className="w-16 h-16 mx-auto" />
-          Eastern Africa
+      <Link to="/eastern-africa" className="w-full sm:w-1/2">
+        <button type="button" className="w-full aspect-square text-white font-bold">
+          <img src={EasternAfricaImage} alt="Eastern Africa" className="w-full h-full mx-auto" />
+          EASTERN AFRICA
         </button>
       </Link>
-      <Link to="/central-africa" className="w-full md:w-1/2 lg:w-1/5 p-2">
-        <button type="button">
-          <img src={CentralAfricaImage} alt="Central Africa" className="w-16 h-16 mx-auto" />
-          Central Africa
+      <Link to="/central-africa" className="w-full sm:w-1/2">
+        <button type="button" className="w-full aspect-square text-white font-bold">
+          <img src={CentralAfricaImage} alt="Central Africa" className="w-full h-full mx-auto" />
+          CENTRAL AFRICA
         </button>
       </Link>
     </div>
