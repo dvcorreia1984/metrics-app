@@ -5,7 +5,7 @@ import SouthernAfrica from './components/SouthernAfrica';
 import NorthernAfrica from './components/NorthernAfrica';
 import WesternAfrica from './components/WesternAfrica'; // Import WesternAfrica component
 import EasternAfrica from './components/EasternAfrica'; // Import EasternAfrica component
-import CentralAfrica from './components/CentralAfrica'; // Import CentralAfrica component
+import MiddleAfrica from './components/MiddleAfrica'; // Import CentralAfrica component
 import CountryList from './components/countryList';
 
 const RoutesComponent = () => (
@@ -17,7 +17,7 @@ const RoutesComponent = () => (
       <Route path="/northern-africa" element={<NorthernAfrica />} />
       <Route path="/western-africa" element={<WesternAfrica />} />
       <Route path="/eastern-africa" element={<EasternAfrica />} />
-      <Route path="/central-africa" element={<CentralAfrica />} />
+      <Route path="/middle-africa" element={<MiddleAfrica />} />
     </Routes>
   </Router>
 );

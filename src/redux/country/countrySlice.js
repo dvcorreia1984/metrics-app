@@ -7,6 +7,9 @@ const initialState = {
   countries: [],
   southernAfricaData: null,
   northernAfricaData: null,
+  easternAfricaData: null,
+  westernAfricaData: null,
+  middleAfricaData: null,
   status: 'idle',
   error: null,
 };
@@ -43,6 +46,12 @@ const countrySlice = createSlice({
           state.southernAfricaData = action.payload;
         } else if (action.meta.arg === 'Northern Africa') {
           state.northernAfricaData = action.payload;
+        } else if (action.meta.arg === 'Eastern Africa') {
+          state.easternAfricaData = action.payload;
+        } else if (action.meta.arg === 'Western Africa') {
+          state.westernAfricaData = action.payload;
+        } else if (action.meta.arg === 'Middle Africa') {
+          state.middleAfricaData = action.payload;
         }
       });
   },
