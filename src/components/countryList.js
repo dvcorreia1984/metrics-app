@@ -38,7 +38,7 @@ const CountryList = () => {
             {country.population}
             {' '}
             Region:
-            {country.region}
+            {country.subregion}
           </li>
         ))}
       </ul>
