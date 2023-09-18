@@ -21,7 +21,7 @@ export const fetchCountries = createAsyncThunk('countries/fetchCountries', async
 
 export const fetchSubregionData = createAsyncThunk('countries/fetchSubregionData', async (subregion) => {
   const response = await axios.get(`https://restcountries.com/v2/subregion/${subregion}`);
-  return response.data[0]; // Take the first country's data
+  return response.data[0];
 });
 
 const countrySlice = createSlice({

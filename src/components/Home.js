@@ -8,7 +8,7 @@ import NorthernAfricaImage from '../assets/country2.svg';
 import MiddleAfricaImage from '../assets/country3.svg';
 import EasternAfricaImage from '../assets/country4.svg';
 import AfricaImage from '../assets/africa.svg';
-import { fetchSubregionData } from '../redux/country/countrySlice';
+import { fetchCountries, fetchSubregionData } from '../redux/country/countrySlice';
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -25,6 +25,7 @@ const Home = () => {
   ]);
 
   useEffect(() => {
+    dispatch(fetchCountries());
     dispatch(fetchSubregionData('Southern Africa'));
     dispatch(fetchSubregionData('Northern Africa'));
     dispatch(fetchSubregionData('Eastern Africa'));
