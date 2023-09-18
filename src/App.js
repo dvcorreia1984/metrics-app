@@ -1,18 +1,21 @@
 // App.js
 import React from 'react';
 import { Provider } from 'react-redux';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import store from './redux/store';
-import Routes from './Routes';
-import Nav from './components/Nav';
+import Home from './components/Home';
 import './styles/App.css';
+import Nav from './components/Nav';
 
 function App() {
   return (
     <Provider store={store}>
-      <div className="App">
+      <Router>
         <Nav />
-        <Routes />
-      </div>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </Router>
     </Provider>
   );
 }
