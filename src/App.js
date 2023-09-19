@@ -6,7 +6,7 @@ import store from './redux/store';
 import Home from './components/Home';
 import './styles/App.css';
 import Nav from './components/Nav';
-import SouthernAfrica from './components/SouthernAfrica';
+import Details from './components/Details';
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
         <Nav />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/southern-africa" element={<SouthernAfrica />} />
+          <Route path="/:subregion" element={<Details />} />
         </Routes>
       </Router>
     </Provider>
