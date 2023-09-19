@@ -1,25 +1,25 @@
-// SouthernAfrica.js
 import React from 'react';
 import { useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
 
-const SouthernAfrica = () => {
+const Details = () => {
+  const { subregion } = useParams();
   const countries = useSelector((state) => state.countries.countries);
+
+  const subregionCountries = countries.filter(
+    (country) => country.subregion === subregion,
+  );
 
   if (!Array.isArray(countries)) {
     return <div>Loading...</div>;
   }
 
-  const southernAfricaSubregion = 'Southern Africa';
-
-  const southernAfricanCountries = countries.filter(
-    (country) => country.subregion === southernAfricaSubregion,
-  );
-
   return (
     <div>
-      <h1>Southern Africa Countries</h1>
+      <h1>{`${subregion} Countries`}</h1>
+      {' '}
       <ul>
-        {southernAfricanCountries.map((country) => (
+        {subregionCountries.map((country) => (
           <li key={country.alpha2Code}>
             <strong>Name:</strong>
             {' '}
@@ -41,4 +41,4 @@ const SouthernAfrica = () => {
   );
 };
 
-export default SouthernAfrica;
+export default Details;

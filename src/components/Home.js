@@ -32,7 +32,6 @@ const Home = () => {
     dispatch(fetchSubregionData('Middle Africa'));
   }, [dispatch]);
 
-  // Function to calculate the total population of a subregion
   const calculatePopulation = (data) => {
     if (data) {
       return data.population;
@@ -62,7 +61,7 @@ const Home = () => {
       >
         <div className="flex flex-wrap max-w-screen-xl mx-auto">
           <div className="w-1/2 sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2 p-2">
-            <Link to="/southern-africa" className="relative">
+            <Link to="/Southern Africa" className="relative">
               <BsArrowRightCircle className="text-white text-2xl absolute top-0 right-0" />
               <div className="w-full aspect-square text-white font-bold flex flex-col items-center">
                 <img
@@ -81,7 +80,7 @@ const Home = () => {
             </Link>
           </div>
           <div className="w-1/2 sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2 p-2 bg-[#3d60a2]">
-            <Link to="/northern-africa" className="relative">
+            <Link to="/Northern Africa" className="relative">
               <BsArrowRightCircle className="text-white text-2xl absolute top-0 right-0" />
               <div className="w-full aspect-square text-white font-bold flex flex-col items-center">
                 <img
@@ -100,7 +99,7 @@ const Home = () => {
             </Link>
           </div>
           <div className="w-1/2 sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2 p-2 bg-[#3d60a2]">
-            <Link to="/middle-africa" className="relative">
+            <Link to="/Middle Africa" className="relative">
               <BsArrowRightCircle className="text-white text-2xl absolute top-0 right-0" />
               <div className="w-full aspect-square text-white font-bold flex flex-col items-center">
                 <img
@@ -119,7 +118,7 @@ const Home = () => {
             </Link>
           </div>
           <div className="w-1/2 sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2 p-2">
-            <Link to="/eastern-africa" className="relative">
+            <Link to="/Eastern Africa" className="relative">
               <BsArrowRightCircle className="text-white text-2xl absolute top-0 right-0" />
               <div className="w-full aspect-square text-white font-bold flex flex-col items-center">
                 <img
