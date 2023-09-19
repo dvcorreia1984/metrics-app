@@ -13,7 +13,7 @@ import EasternAfricaImage from '../assets/country4.svg';
 import WesternAfricaImage from '../assets/country5.svg';
 
 const Card = ({
-  to, imageSrc, title, subtitle, backgroundColor,
+  to, imageSrc, title, subtitle, backgroundColor, population,
 }) => (
   <div className="w-1/2 sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2 p-2" style={{ backgroundColor }}>
     <Link to={to} className="relative">
@@ -23,7 +23,7 @@ const Card = ({
         <div className="w-full flex flex-col text-sm">
           <span className="flex justify-end mb-[-5px]">{title}</span>
           <span className="flex justify-end mb-[-5px]">{subtitle}</span>
-          <span className="flex justify-end font-light" />
+          <span className="flex justify-end font-light">{population}</span>
         </div>
       </div>
     </Link>
@@ -36,6 +36,7 @@ Card.propTypes = {
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,
   backgroundColor: PropTypes.string.isRequired,
+  population: PropTypes.number.isRequired,
 };
 
 const Home = () => {
@@ -60,11 +61,11 @@ const Home = () => {
       <div className="bg-[#35548b] pl-5 text-white text-sm">STATS BY COUNTRY</div>
       <div className="flex justify-center bg-[#3f66ab]" id="container">
         <div className="flex flex-wrap max-w-screen-xl mx-auto">
-          <Card to="/Southern Africa" imageSrc={SouthernAfricaImage} title="SOUTHERN" subtitle="AFRICA" backgroundColor="#35548b" />
-          <Card to="/Northern Africa" imageSrc={NorthernAfricaImage} title="NORTHERN" subtitle="AFRICA" />
-          <Card to="/Middle Africa" imageSrc={MiddleAfricaImage} title="MIDDLE" subtitle="AFRICA" />
-          <Card to="/Eastern Africa" imageSrc={EasternAfricaImage} title="EASTERN" subtitle="AFRICA" backgroundColor="#35548b" />
-          <Card to="/Western Africa" imageSrc={WesternAfricaImage} title="WESTERN" subtitle="AFRICA" backgroundColor="#35548b" />
+          <Card to="/Southern Africa" imageSrc={SouthernAfricaImage} title="SOUTHERN" subtitle="AFRICA" backgroundColor="#35548b" population={214234235} />
+          <Card to="/Northern Africa" imageSrc={NorthernAfricaImage} title="NORTHERN" subtitle="AFRICA" population={671241233} />
+          <Card to="/Middle Africa" imageSrc={MiddleAfricaImage} title="MIDDLE" subtitle="AFRICA" population={382354325} />
+          <Card to="/Eastern Africa" imageSrc={EasternAfricaImage} title="EASTERN" subtitle="AFRICA" backgroundColor="#35548b" population={2143245476} />
+          <Card to="/Western Africa" imageSrc={WesternAfricaImage} title="WESTERN" subtitle="AFRICA" backgroundColor="#35548b" population={109891234} />
         </div>
       </div>
     </div>
