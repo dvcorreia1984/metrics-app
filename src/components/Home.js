@@ -61,12 +61,12 @@ const Home = () => {
       <div className="bg-[#35548b] pl-5 text-white text-sm">STATS BY COUNTRY</div>
       <div className="flex justify-center bg-[#3f66ab]" id="container">
         <div className="flex flex-wrap max-w-screen-xl mx-auto">
-          {countries.map((country) => (
+          {countries.map((country, index) => (
             <Card
               key={country.alpha2code}
               to={`/${country.name}`}
               title={country.name}
-              backgroundColor="#35548b"
+              backgroundColor={index === 0 || index === 3 || index === 4 || index === 7 ? '#3f66ab' : '#4369b2'}
               population={country.population}
               imageSrc={country.flag}
             />
