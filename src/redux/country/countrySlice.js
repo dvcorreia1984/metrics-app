@@ -10,7 +10,7 @@ const initialState = {
 };
 
 export const fetchCountries = createAsyncThunk('countries/fetchCountries', async () => {
-  const response = await axios.get('https://restcountries.com/v2/region/africa');
+  const response = await axios.get('https://restcountries.com/v2/subregion/Southern Africa');
   return response.data;
 });
 
