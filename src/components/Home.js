@@ -16,9 +16,13 @@ const Card = ({
       <div className="w-10/12 aspect-square text-white font-bold flex flex-col items-center justify-start">
         <img src={imageSrc} alt={title} className="object-cover" />
         <div className="w-full flex flex-col text-sm">
-          <span className="flex justify-end mb-[-5px]">{title}</span>
-          <span className="flex justify-end mb-[-5px]">{subtitle}</span>
-          <span className="flex justify-end font-light">{population}</span>
+          <span className="flex justify-end">{title}</span>
+          <span className="flex justify-end">{subtitle}</span>
+          <span className="flex justify-end font-light">
+            Population:
+            {' '}
+            {population}
+          </span>
         </div>
       </div>
     </Link>
@@ -37,7 +41,6 @@ Card.propTypes = {
 const Home = () => {
   const dispatch = useDispatch();
   const countries = useSelector((state) => state.countries.countries);
-  console.log(countries);
 
   useEffect(() => {
     dispatch(fetchCountries());
@@ -51,7 +54,7 @@ const Home = () => {
         </div>
         <div className="flex flex-col justify-center items-start text-white">
           <h1 className="font-bold"> SOUTHERN AFRICA</h1>
-          <h3 className="mt-[-5px] text-[10px]">Population</h3>
+          <h3 className="mt-[-5px] text-[10px]">Population:  60,546,598</h3>
         </div>
       </div>
 
