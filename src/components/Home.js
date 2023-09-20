@@ -14,7 +14,7 @@ const Card = ({
     <Link to={to} className="relative">
       <BsArrowRightCircle className="text-white text-2xl absolute top-0 right-0" />
       <div className="w-10/12 aspect-square text-white font-bold flex flex-col items-center justify-start">
-        <img src={imageSrc} alt={title} className="object-cover" />
+        <img src={imageSrc} alt={title} className="object-cover rounded-lg" />
         <div className="w-full flex flex-col text-sm">
           <span className="flex justify-end">{title}</span>
           <span className="flex justify-end">{subtitle}</span>
@@ -61,12 +61,12 @@ const Home = () => {
       <div className="bg-[#35548b] pl-5 text-white text-sm">STATS BY COUNTRY</div>
       <div className="flex justify-center bg-[#3f66ab]" id="container">
         <div className="flex flex-wrap max-w-screen-xl mx-auto">
-          {countries.map((country) => (
+          {countries.map((country, index) => (
             <Card
               key={country.alpha2code}
               to={`/${country.name}`}
               title={country.name}
-              backgroundColor="#35548b"
+              backgroundColor={index === 0 || index === 3 || index === 4 || index === 7 ? '#3f66ab' : '#4369b2'}
               population={country.population}
               imageSrc={country.flag}
             />

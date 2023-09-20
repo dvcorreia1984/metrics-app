@@ -9,14 +9,20 @@ const Nav = () => {
 
   let displayText = 'Home';
 
-  if (currentPathname === '/Southern%20Africa' || currentPathname === '/southern-africa') {
-    displayText = 'Southern Africa';
-  } else if (currentPathname === '/Northern%20Africa' || currentPathname === '/northern-africa') {
-    displayText = 'Northern Africa';
-  } else if (currentPathname === '/Eastern%20Africa' || currentPathname === '/eastern-africa') {
-    displayText = 'Eastern Africa';
-  } else if (currentPathname === '/Middle%20Africa' || currentPathname === '/middle-africa') {
-    displayText = 'Middle Africa';
+  if (currentPathname === '/Botswana' || currentPathname === '/botswana') {
+    displayText = 'Botswana';
+  } else if (currentPathname === '/French%20Southern%20Territories' || currentPathname === '/french-southern-teritories') {
+    displayText = 'French Southern Teritories';
+  } else if (currentPathname === '/Lesotho' || currentPathname === '/lesotho') {
+    displayText = 'Lesotho';
+  } else if (currentPathname === '/Namibia' || currentPathname === '/namibia') {
+    displayText = 'Namibia';
+  } else if (currentPathname === '/South%20Africa' || currentPathname === '/south-africa') {
+    displayText = 'South Africa';
+  } else if (currentPathname === '/Swaziland' || currentPathname === '/swaziland') {
+    displayText = 'Swaziland';
+  } else if (currentPathname === '/Zimbabwe' || currentPathname === '/zimbabwe') {
+    displayText = 'zimbabwe';
   }
 
   return (
