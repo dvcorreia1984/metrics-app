@@ -22,7 +22,7 @@ const Details = () => {
       <div className="flex h-40 bg-[#5487e3] justify-center gap-10">
         <div className="flex w-1/4 text-blue-950 py-3 items-center">
           <div>
-            <img src={selectedCountry?.flag} alt={subregion} className="w-40 h-30" />
+            <img src={selectedCountry?.flag} alt={subregion} className="w-40 h-30 rounded-lg" />
           </div>
         </div>
         <div className="flex flex-col justify-center items-start text-white">

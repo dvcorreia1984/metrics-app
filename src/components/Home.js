@@ -14,7 +14,7 @@ const Card = ({
     <Link to={to} className="relative">
       <BsArrowRightCircle className="text-white text-2xl absolute top-0 right-0" />
       <div className="w-10/12 aspect-square text-white font-bold flex flex-col items-center justify-start">
-        <img src={imageSrc} alt={title} className="object-cover" />
+        <img src={imageSrc} alt={title} className="object-cover rounded-lg" />
         <div className="w-full flex flex-col text-sm">
           <span className="flex justify-end">{title}</span>
           <span className="flex justify-end">{subtitle}</span>
