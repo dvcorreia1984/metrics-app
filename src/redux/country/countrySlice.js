@@ -5,17 +5,12 @@ import axios from 'axios';
 
 const initialState = {
   countries: [],
-  southernAfricaData: null,
-  northernAfricaData: null,
-  easternAfricaData: null,
-  westernAfricaData: null,
-  middleAfricaData: null,
   status: 'idle',
   error: null,
 };
 
 export const fetchCountries = createAsyncThunk('countries/fetchCountries', async () => {
-  const response = await axios.get('https://restcountries.com/v2/region/africa');
+  const response = await axios.get('https://restcountries.com/v2/subregion/Southern Africa');
   return response.data;
 });
 
