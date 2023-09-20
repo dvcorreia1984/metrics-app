@@ -18,7 +18,7 @@ const Details = () => {
             <img
               src={filteredCountries[0]?.flag}
               alt={subregion}
-              className="h-32 w-32"
+              className="w-40 h-40"
             />
           </div>
         </div>
