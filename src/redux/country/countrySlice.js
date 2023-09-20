@@ -5,11 +5,6 @@ import axios from 'axios';
 
 const initialState = {
   countries: [],
-  southernAfricaData: null,
-  northernAfricaData: null,
-  easternAfricaData: null,
-  westernAfricaData: null,
-  middleAfricaData: null,
   status: 'idle',
   error: null,
 };
