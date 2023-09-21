@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchCountries } from '../redux/country/countrySlice';
 
-const Filter = () => {
+const Filter = ({ selectedRegion }) => {
   const dispatch = useDispatch();
   const countries = useSelector((state) => state.countries.countries);
 
@@ -10,7 +10,10 @@ const Filter = () => {
     dispatch(fetchCountries());
   }, [dispatch]);
 
-  const filteredCountries = countries.filter((country) => country.region === 'Africa');
+  const filteredCountries = selectedRegion === 'World'
+    ? countries
+    : countries.filter((country) => country.region === selectedRegion);
+
   return filteredCountries;
 };
 

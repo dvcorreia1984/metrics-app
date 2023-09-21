@@ -1,13 +1,15 @@
+// Nav.js
 import { FaChevronLeft, FaCog, FaMicrophone } from 'react-icons/fa';
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
+import Home from './Home';
 
 const Nav = () => {
   const location = useLocation();
   const currentPathname = location.pathname;
-  const [selectedRegion, setSelectedRegion] = React.useState('World');
+  const [selectedRegion, setSelectedRegion] = useState('World');
 
-  const handleSelect = (e) => {
+  const handleRegionChange = (e) => {
     setSelectedRegion(e.target.value);
   };
 
@@ -33,11 +35,11 @@ const Nav = () => {
             <select
               className="border border-gray-300 rounded-full text-gray-600 h-10 pl-5 pr-10 bg-white hover:border-gray-400 focus:outline-none appearance-none"
               value={selectedRegion}
-              onChange={handleSelect}
+              onChange={handleRegionChange}
             >
               <option>World</option>
               <option>Africa</option>
-              <option>America</option>
+              <option>Americas</option>
               <option>Asia</option>
               <option>Europe</option>
               <option>Oceania</option>
@@ -50,6 +52,7 @@ const Nav = () => {
           <FaCog />
         </div>
       </nav>
+      <Home selectedRegion={selectedRegion} />
     </>
   );
 };

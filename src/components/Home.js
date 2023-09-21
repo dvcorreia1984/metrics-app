@@ -37,8 +37,8 @@ Card.propTypes = {
   population: PropTypes.number.isRequired,
 };
 
-const Home = () => {
-  const filteredCountries = Filter();
+const Home = ({ selectedRegion }) => {
+  const filteredCountries = Filter({ selectedRegion });
   return (
     <div>
       <div className="flex bg-[#5487e3] justify-center gap-10">
@@ -68,6 +68,10 @@ const Home = () => {
       </div>
     </div>
   );
+};
+
+Home.propTypes = {
+  selectedRegion: PropTypes.string.isRequired,
 };
 
 export default Home;
