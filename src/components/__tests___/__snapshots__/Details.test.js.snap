@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Details Component should match the snapshot 1`] = `
+Array [
+  " ",
+  <div>
+    <div
+      className="flex h-40 bg-[#5487e3] justify-center gap-10"
+    >
+      <div
+        className="flex w-1/4 text-blue-950 py-3 items-center"
+      >
+        <div>
+          <img
+            className="w-40 h-30 rounded-lg"
+          />
+        </div>
+      </div>
+      <div
+        className="flex flex-col justify-center items-start text-white"
+      >
+        <h1
+          className="font-bold"
+        />
+        <h3
+          className="mt-[-5px] text-[10px]"
+        >
+          Population: undefined
+        </h3>
+      </div>
+    </div>
+    <div
+      className="bg-[#35548b] pl-5 h-8 text-white text-sm"
+    >
+      STATS BY COUNTRY
+    </div>
+    <div>
+      <ul>
+        <li
+          className="flex text-2xl h-24 p-5 items-center text-white gap-5 even:bg-[#35548b]"
+        >
+          <div
+            className="w-7/12 pl-5"
+          >
+            CAPITAL
+          </div>
+          <div
+            className="w-4/12"
+          />
+        </li>
+        <li
+          className="flex text-2xl h-24 p-5 items-center text-white gap-5 even:bg-[#35548b]"
+        >
+          <div
+            className="w-7/12 pl-5"
+          >
+            POPULATION
+          </div>
+          <div
+            className="w-4/12"
+          />
+        </li>
+        <li
+          className="flex text-2xl h-24 p-5 items-center text-white gap-5 even:bg-[#35548b]"
+        >
+          <div
+            className="w-7/12 pl-5"
+          >
+            AREA
+          </div>
+          <div
+            className="w-4/12"
+          />
+        </li>
+        <li
+          className="flex text-2xl h-24 p-5 items-center text-white gap-5 even:bg-[#35548b]"
+        >
+          <div
+            className="w-7/12 pl-5"
+          >
+            CURRENCY
+          </div>
+          <div
+            className="w-4/12"
+          />
+        </li>
+        <li
+          className="flex text-2xl h-24 p-5 items-center text-white gap-5 even:bg-[#35548b]"
+        >
+          <div
+            className="w-7/12 pl-5"
+          >
+            CALLING CODE
+          </div>
+          <div
+            className="w-4/12"
+          />
+        </li>
+        <li
+          className="flex text-2xl h-24 p-5 items-center text-white gap-5 even:bg-[#35548b]"
+        >
+          <div
+            className="w-7/12 pl-5"
+          >
+            TIMEZONES
+          </div>
+          <div
+            className="w-4/12"
+          />
+        </li>
+      </ul>
+    </div>
+  </div>,
+]
+`;

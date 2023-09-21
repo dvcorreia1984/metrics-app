@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Component Snapshot should match the snapshot 1`] = `
+<div>
+  <div
+    className="flex bg-[#5487e3] justify-center gap-10"
+  >
+    <div
+      className="w-1/4 text-blue-950 py-3"
+    >
+      <img
+        alt="africa"
+        src="africa.svg"
+      />
+    </div>
+    <div
+      className="flex flex-col justify-center items-start text-white"
+    >
+      <h1
+        className="font-bold"
+      >
+         SOUTHERN AFRICA
+      </h1>
+      <h3
+        className="mt-[-5px] text-[10px]"
+      >
+        Population:  60,546,598
+      </h3>
+    </div>
+  </div>
+  <div
+    className="bg-[#35548b] pl-5 text-white text-sm"
+  >
+    STATS BY COUNTRY
+  </div>
+  <div
+    className="flex justify-center bg-[#3f66ab]"
+    id="container"
+  >
+    <div
+      className="flex flex-wrap max-w-screen-xl mx-auto"
+    />
+  </div>
+</div>
+`;
