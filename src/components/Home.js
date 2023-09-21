@@ -1,11 +1,10 @@
 // Home.js
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
 import { BsArrowRightCircle } from 'react-icons/bs';
 import PropTypes from 'prop-types';
 import AfricaImage from '../assets/africa.svg';
-import { fetchCountries } from '../redux/country/countrySlice';
+import Filter from './Filter';
 
 const Card = ({
   to, imageSrc, title, subtitle, backgroundColor, population,
@@ -39,13 +38,7 @@ Card.propTypes = {
 };
 
 const Home = () => {
-  const dispatch = useDispatch();
-  const countries = useSelector((state) => state.countries.countries);
-
-  useEffect(() => {
-    dispatch(fetchCountries());
-  }, [dispatch]);
-
+  const filteredCountries = Filter();
   return (
     <div>
       <div className="flex bg-[#5487e3] justify-center gap-10">
@@ -53,7 +46,7 @@ const Home = () => {
           <img src={AfricaImage} alt="africa" />
         </div>
         <div className="flex flex-col justify-center items-start text-white">
-          <h1 className="font-bold"> SOUTHERN AFRICA</h1>
+          <h1 className="font-bold"> WORLD </h1>
           <h3 className="mt-[-5px] text-[10px]">Population:  60,546,598</h3>
         </div>
       </div>
@@ -61,7 +54,7 @@ const Home = () => {
       <div className="bg-[#35548b] pl-5 text-white text-sm">STATS BY COUNTRY</div>
       <div className="flex justify-center bg-[#3f66ab]" id="container">
         <div className="flex flex-wrap max-w-screen-xl mx-auto">
-          {countries.map((country, index) => (
+          {filteredCountries.map((country, index) => (
             <Card
               key={country.alpha2code}
               to={`/${country.name}`}
