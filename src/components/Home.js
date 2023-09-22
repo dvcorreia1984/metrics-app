@@ -46,7 +46,7 @@ const Home = () => {
           <img src={AfricaImage} alt="africa" />
         </div>
         <div className="flex flex-col justify-center items-start text-white">
-          <h1 className="font-bold"> WORLD </h1>
+          <h1 className="font-bold"> AFRICA </h1>
           <h3 className="mt-[-5px] text-[10px]">Population:  60,546,598</h3>
         </div>
       </div>
