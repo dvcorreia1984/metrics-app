@@ -1,5 +1,5 @@
 // redux/country/countrySlice.test.js
-import countryReducer, { fetchCountries } from '../redux/country/countrySlice';
+import countryReducer, { fetchCountries } from '../countrySlice';
 
 describe('countryReducer', () => {
   it('should handle fetchCountries.pending', () => {

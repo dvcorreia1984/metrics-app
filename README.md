@@ -31,23 +31,25 @@
 
 ## 📖 Metrics App is an app that displays spesific information from an API based on user navigation. 
 
-## 🛠 Built With <a name="built-with">React & Radux</a>
+Live demo on Render: [Live Demo](https://countries-hc2y.onrender.com/)
+
+Video: [Video](https://www.loom.com/share/5b47238316514ea88d135a30003ccbf8?sid=ea93f3d1-6dc3-4cb0-9907-2145c3078b06)
+
+## 🛠 Built With <a name="built-with">React & Redux</a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
   <ul>
     <li>React</li>
     <li>Redux</li>
+    <li>TailwindCSS</li>
   </ul>
 
 ### Key Features <a name="key-features">
 
--A user interface where new tasks can be created. 
--Tasks can also be removed and edited. 
-- Data is stored in local storage
-- Checkboxes are used to mark tasks that are completed. 
-- Unit testing was added. 
-
+- The REST Countries API was used to get country data
+- A list of all countries was displayed on the homepage
+- A user can click on a country to see more detailed information on a separate page
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

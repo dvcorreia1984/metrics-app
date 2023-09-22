@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
-import store from '../redux/store';
+import store from '../store';
 
 describe('Redux Store', () => {
   it('should configure the store with the correct reducer', () => {
