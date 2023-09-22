@@ -59,7 +59,7 @@ const Home = () => {
               key={country.alpha2code}
               to={`/${country.name}`}
               title={country.name}
-              backgroundColor={index === 0 || index === 3 || index === 4 || index === 7 ? '#3f66ab' : '#4369b2'}
+              backgroundColor={index === 0 || index === 3 || index === 4 || index === 7 || index === 8 ? '#3f66ab' : '#4369b2'}
               population={country.population}
               imageSrc={country.flag}
             />
