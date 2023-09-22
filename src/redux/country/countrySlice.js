@@ -11,7 +11,19 @@ const initialState = {
 
 export const fetchCountries = createAsyncThunk('countries/fetchCountries', async () => {
   const response = await axios.get('https://restcountries.com/v2/all');
-  return response.data;
+  const data = await response.data;
+  const mappedCountries = data.map((country) => ({
+    region: country.region,
+    name: country.name,
+    population: country.population,
+    flag: country.flag,
+    alpha2code: country.alpha2Code,
+    currency: country.currencies,
+    area: country.area,
+    callingCode: country.callingCodes,
+    timezones: country.timezones,
+  }));
+  return mappedCountries;
 });
 
 const countrySlice = createSlice({

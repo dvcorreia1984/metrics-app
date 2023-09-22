@@ -1,10 +1,11 @@
 // Home.js
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { BsArrowRightCircle } from 'react-icons/bs';
 import PropTypes from 'prop-types';
+import { useDispatch, useSelector } from 'react-redux';
 import AfricaImage from '../assets/africa.svg';
-import Filter from './Filter';
+import { fetchCountries } from '../redux/country/countrySlice';
 
 const Card = ({
   to, imageSrc, title, backgroundColor, population,
@@ -36,7 +37,12 @@ Card.propTypes = {
 };
 
 const Home = () => {
-  const countries = Filter();
+  const dispatch = useDispatch();
+  const countries = useSelector((state) => state.countries.countries);
+
+  useEffect(() => {
+    dispatch(fetchCountries());
+  }, []);
 
   return (
     <div>

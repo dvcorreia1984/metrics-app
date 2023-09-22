@@ -7,11 +7,12 @@ import Search from './Search';
 const Nav = () => {
   const location = useLocation();
   const currentPathname = location.pathname;
-  const [selectedRegion, setSelectedRegion] = useState('World');
+  const [selectedRegion, setSelectedRegion] = useState('Africa');
 
-  const handleRegionChange = (e) => {
-    setSelectedRegion(e.target.value);
+  const handleRegionChange = (newRegion) => {
+    setSelectedRegion(newRegion);
   };
+  console.log('selectedRegion in Nav:', selectedRegion);
 
   let displayText = currentPathname;
   if (currentPathname === '/') {
