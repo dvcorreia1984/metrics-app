@@ -2,19 +2,24 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchCountries } from '../redux/country/countrySlice';
 
-const Filter = ({ selectedRegion }) => {
+const Filter = () => {
   const dispatch = useDispatch();
   const countries = useSelector((state) => state.countries.countries);
+  console.log(fetchCountries);
 
   useEffect(() => {
     dispatch(fetchCountries());
-  }, [dispatch]);
+  }, []);
 
-  const filteredCountries = selectedRegion === 'World'
-    ? countries
-    : countries.filter((country) => country.region === selectedRegion);
+  // const africanRegion = countries.filter((countries) => countries.region === 'Africa');
+  // const asiaRegion = countries.filter((countries) => countries.region === 'Asia');
+  // const europeanRegion = countries.filter((countries) => countries.region === 'Europe');
+  // const americasRegion = countries.filter((countries) => countries.region === 'Americas');
+  const oceaniaRegion = countries.filter((countries) => countries.region === 'Oceania');
 
-  return filteredCountries;
+  // Get selected region from Search
+
+  return oceaniaRegion;
 };
 
 export default Filter;

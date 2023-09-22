@@ -7,7 +7,7 @@ import AfricaImage from '../assets/africa.svg';
 import Filter from './Filter';
 
 const Card = ({
-  to, imageSrc, title, subtitle, backgroundColor, population,
+  to, imageSrc, title, backgroundColor, population,
 }) => (
   <div className="w-1/2 sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2 p-2" style={{ backgroundColor }}>
     <Link to={to} className="relative">
@@ -16,7 +16,6 @@ const Card = ({
         <img src={imageSrc} alt={title} className="object-cover rounded-lg" />
         <div className="w-full flex flex-col text-sm">
           <span className="flex justify-end">{title}</span>
-          <span className="flex justify-end">{subtitle}</span>
           <span className="flex justify-end font-light">
             Population:
             {' '}
@@ -32,13 +31,13 @@ Card.propTypes = {
   to: PropTypes.string.isRequired,
   imageSrc: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  subtitle: PropTypes.string.isRequired,
   backgroundColor: PropTypes.string.isRequired,
   population: PropTypes.number.isRequired,
 };
 
-const Home = ({ selectedRegion }) => {
-  const filteredCountries = Filter({ selectedRegion });
+const Home = () => {
+  const countries = Filter();
+
   return (
     <div>
       <div className="flex bg-[#5487e3] justify-center gap-10">
@@ -46,7 +45,7 @@ const Home = ({ selectedRegion }) => {
           <img src={AfricaImage} alt="africa" />
         </div>
         <div className="flex flex-col justify-center items-start text-white">
-          <h1 className="font-bold"> WORLD </h1>
+          <h1 className="font-bold uppercase">World</h1>
           <h3 className="mt-[-5px] text-[10px]">Population:  60,546,598</h3>
         </div>
       </div>
@@ -54,9 +53,9 @@ const Home = ({ selectedRegion }) => {
       <div className="bg-[#35548b] pl-5 text-white text-sm">STATS BY COUNTRY</div>
       <div className="flex justify-center bg-[#3f66ab]" id="container">
         <div className="flex flex-wrap max-w-screen-xl mx-auto">
-          {filteredCountries.map((country, index) => (
+          {countries.map((country, index) => (
             <Card
-              key={country.alpha2code}
+              key={country.alpha3Code}
               to={`/${country.name}`}
               title={country.name}
               backgroundColor={index === 0 || index === 3 || index === 4 || index === 7 ? '#3f66ab' : '#4369b2'}
@@ -68,10 +67,6 @@ const Home = ({ selectedRegion }) => {
       </div>
     </div>
   );
-};
-
-Home.propTypes = {
-  selectedRegion: PropTypes.string.isRequired,
 };
 
 export default Home;
