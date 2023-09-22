@@ -141,7 +141,7 @@ I would like to thank...
 
 Can I clone this project?\*\*
 
-- Of course, you can as long as you fork it and star it
+- Of course, you can as long as you fork it and star it too
 
 Can I contribute to this project?\*\*
 
