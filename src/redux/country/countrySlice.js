@@ -22,6 +22,7 @@ export const fetchCountries = createAsyncThunk('countries/fetchCountries', async
     area: country.area,
     callingCode: country.callingCodes,
     timezones: country.timezones,
+    capital: country.capital,
   }));
   return mappedCountries;
 });
