@@ -131,7 +131,7 @@ people.
 
 I would like to thank...
 
-- Nelson Sakwa for his amazing design on Behance (https://www.behance.net/sakwadesignstudio)
+- Nelson Sakwa for his amazing design on Behance (https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs))
 - My Coding Partners
 - Microverse Community in Slack
 
