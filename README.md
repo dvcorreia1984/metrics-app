@@ -131,7 +131,7 @@ people.
 
 I would like to thank...
 
-- Microverse Review Team
+- Nelson Sakwa for his amazing design on Behance (https://www.behance.net/sakwadesignstudio)
 - My Coding Partners
 - Microverse Community in Slack
 
