@@ -1,9 +1,13 @@
-// Search.js
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { useState } from 'react';
 
-const Search = ({ selectedRegion, handleRegionChange }) => {
-  console.log('selectedRegion in Search:', selectedRegion);
+const Search = () => {
+  const [selectedRegion, setSelectedRegion] = useState('World');
+
+  const handleRegionChange = (event) => {
+    const newRegion = event.target.value;
+    setSelectedRegion(newRegion);
+  };
+
   return (
     <>
       <div className="relative inline-flex">
@@ -23,21 +27,16 @@ const Search = ({ selectedRegion, handleRegionChange }) => {
           value={selectedRegion}
           onChange={handleRegionChange}
         >
-          <option>World</option>
-          <option>Africa</option>
-          <option>Americas</option>
-          <option>Asia</option>
-          <option>Europe</option>
-          <option>Oceania</option>
+          <option value="World">World</option>
+          <option value="Africa">Africa</option>
+          <option value="Americas">Americas</option>
+          <option value="Asia">Asia</option>
+          <option value="Europe">Europe</option>
+          <option value="Oceania">Oceania</option>
         </select>
       </div>
     </>
   );
-};
-
-Search.propTypes = {
-  selectedRegion: PropTypes.string.isRequired,
-  handleRegionChange: PropTypes.func.isRequired,
 };
 
 export default Search;

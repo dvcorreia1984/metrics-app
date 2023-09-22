@@ -1,18 +1,13 @@
 // Nav.js
 import { FaChevronLeft, FaCog, FaMicrophone } from 'react-icons/fa';
-import React, { useState } from 'react';
+import React from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import Search from './Search';
 
-const Nav = () => {
+const Nav = (selectedRegion, handleRegionChange) => {
   const location = useLocation();
   const currentPathname = location.pathname;
-  const [selectedRegion, setSelectedRegion] = useState('Africa');
-
-  const handleRegionChange = (newRegion) => {
-    setSelectedRegion(newRegion);
-  };
-  console.log('selectedRegion in Nav:', selectedRegion);
 
   let displayText = currentPathname;
   if (currentPathname === '/') {
@@ -43,6 +38,11 @@ const Nav = () => {
       </nav>
     </>
   );
+};
+
+Nav.propsTypes = {
+  selectedRegion: PropTypes.string.isRequired,
+  handleRegionChange: PropTypes.func.isRequired,
 };
 
 export default Nav;

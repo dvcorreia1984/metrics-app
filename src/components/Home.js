@@ -44,6 +44,10 @@ const Home = () => {
     dispatch(fetchCountries());
   }, []);
 
+  // select region from Nav
+
+  // Implementeer kode hier en skuif later na ander modules toe
+
   return (
     <div>
       <div className="flex bg-[#5487e3] justify-center gap-10">
